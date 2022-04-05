@@ -63,6 +63,11 @@ body {
     z-index: -1;
 }
 
+.product-text {
+    color: #14213d;
+    text-align: center;
+}
+
 /* -------------------------------- Media Queries */
 
 /* make the container larger on bigger screens */
