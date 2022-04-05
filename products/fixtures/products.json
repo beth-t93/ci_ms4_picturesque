@@ -20,5 +20,82 @@
             "image":"frame2.jpeg",
             "category":"2"
        }
-    }
+    },
+    {
+      "pk":3,
+      "model":"products.product",
+      "fields":{
+          "name":"Black frame",
+          "description":"A striking frame that will grab your attention and make your print stand out",
+          "price":"12.99",
+          "image":"frame3.jpeg",
+          "category":"2"
+      }
+   },
+   {
+      "pk":4,
+      "model":"products.product",
+      "fields":{
+          "name":"Light oak frame",
+          "description":"The light oak of this frame will give a natural feel to your gallery wall without taking away from the prints",
+          "price":"12.99",
+          "image":"frame4.jpeg",
+          "category":"2"
+      }
+   },
+   {
+      "pk":5,
+      "model":"products.product",
+      "fields":{
+          "name":"Pine frame",
+          "description":"This pine frame is perfect as it is or it is ready for you to decorate to match your own decor.",
+          "price":"10.99",
+          "image":"frame5.jpeg",
+          "category":"2"
+      }
+   },
+   {
+      "pk":6,
+      "model":"products.product",
+      "fields":{
+          "name":"Double black frame",
+          "description":"This slightly more ornate frame gives you more frame around your print",
+          "price":"12.99",
+          "image":"frame6.jpeg",
+          "category":"2"
+      }
+   },
+   {
+      "pk":7,
+      "model":"products.product",
+      "fields":{
+          "name":"Brass frame",
+          "description":"This frame is perfect hung on the wall or freestanding with its built in stand",
+          "price":"15.99",
+          "image":"frame7.jpeg",
+          "category":"2"
+      }
+   },
+   {
+      "pk":8,
+      "model":"products.product",
+      "fields":{
+          "name":"Wooden Backless Frame",
+          "description":"The light wood frame combined with the backless look allows your own wall color to mount the print.",
+          "price":"15.99",
+          "image":"frame8.jpeg",
+          "category":"2"
+      }
+   },
+   {
+      "pk":9,
+      "model":"products.product",
+      "fields":{
+          "name":"Frame Mount",
+          "description":"This off white mount can be added to most of our frames to give some distance between the actual frame and the art.",
+          "price":"5.99",
+          "image":"frame9.jpeg",
+          "category":"2"
+      }
+   }
  ]
