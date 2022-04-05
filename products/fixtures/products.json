@@ -1,0 +1,24 @@
+[
+    {
+       "pk":1,
+       "model":"products.product",
+       "fields":{
+           "name":"Bleached wood frame",
+           "description":"A light wood frame that will not detract from the print inside",
+           "price":"12.99",
+           "image":"frame1.jpeg",
+           "in_stock":"true"
+       }
+    },
+    {
+       "pk":2,
+       "model":"products.product",
+       "fields":{
+        "name":"White wood frame",
+        "description":"A white wood frame that will make all eyes stay on the print",
+        "price":"12.99",
+        "image":"frame2.jpeg",
+        "in_stock":"true"
+       }
+    }
+ ]
