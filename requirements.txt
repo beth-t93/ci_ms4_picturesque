@@ -16,6 +16,7 @@ django-allauth==0.41.0
 django-cloudinary-storage==0.3.0
 django-countries==7.2.1
 django-crispy-forms==1.14.0
+django-environ==0.8.1
 django-storages==1.12.3
 djangorestframework==3.13.1
 dnspython==2.1.0
