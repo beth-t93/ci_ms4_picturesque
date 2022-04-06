@@ -97,5 +97,72 @@
           "image":"frame9.jpeg",
           "category":"2"
       }
+   },
+   {
+      "pk":10,
+      "model":"products.product",
+      "fields":{
+          "name":"Waterfall",
+          "description":"Taken near Llyn Idwal, North Wales",
+          "price":"20.99",
+          "image":"print1.JPG",
+          "category":"1"
+      }
+   },
+   {
+      "pk":11,
+      "model":"products.product",
+      "fields":{
+          "name":"Path to the lake",
+          "description":"Taken on the path towards Llyn Idwal, North Wales",
+          "price":"20.99",
+          "image":"print2.JPG",
+          "category":"1"
+      }
+   },
+   {
+      "pk":12,
+      "model":"products.product",
+      "fields":{
+          "name":"Eiffel from Below",
+          "description":"The Eiffel Tower from another perspective",
+          "price":"20.99",
+          "image":"print3.JPG",
+          "category":"1"
+      }
+   },
+   {
+      "pk":13,
+      "model":"products.product",
+      "fields":{
+          "name":"Restaurant Le Basilic",
+          "description":"Taken in Montmatre, Paris. In the back of the image you can also see the block Vincent Van Gogh lived in while he was in Paris.",
+          "price":"20.99",
+          "image":"print4.JPG",
+          "category":"1"
+      }
+   },
+   {
+      "pk":14,
+      "model":"products.product",
+      "fields":{
+          "name":"Windmill",
+          "description":"Montmatre's windmill, Paris",
+          "price":"20.99",
+          "image":"print5.JPG",
+          "category":"1"
+      }
+   },
+   {
+      "pk":15,
+      "model":"products.product",
+      "fields":{
+          "name":"Steps of Montmatre",
+          "description":"Some of the many steps in Montmatre",
+          "price":"20.99",
+          "image":"print6.JPG",
+          "category":"1"
+      }
    }
+
  ]
