@@ -1,0 +1,15 @@
+.fieldset-label {
+    position: relative;
+    right: .5rem;
+}
+
+#payment-form .form-control,
+#card-element {
+    color: #000;
+    border: 1px solid #000;
+}
+
+.checkout-header {
+    text-align: center;
+    color: #000;
+}
