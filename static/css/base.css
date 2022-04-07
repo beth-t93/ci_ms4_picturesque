@@ -152,6 +152,31 @@ body {
 	color: #17a2b8; /* text-info */
 }
 
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-color: #000;
+}
+
+.custom-checkbox .custom-control-label:checked~.custom-control-label::before {
+    background-color: #FCA311;
+    border-color: #FCA311;
+}
 
 /* -------------------------------- Media Queries */
 
