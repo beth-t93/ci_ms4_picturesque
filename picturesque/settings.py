@@ -1,4 +1,5 @@
 import os
+import dj_database_url
 
 import environ
 env = environ.Env()
@@ -110,11 +111,15 @@ WSGI_APPLICATION = 'picturesque.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': dj_database_url.parse('postgres://ewpanrbzxtrivm:53190765ca19431bdd248e5921f7b527246a72e7c1891c651759cf2e35d9436c@ec2-63-32-248-14.eu-west-1.compute.amazonaws.com:5432/d4ur1eq13ej4ar')
 }
 
 
