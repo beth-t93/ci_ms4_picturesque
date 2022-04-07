@@ -1,7 +1,6 @@
-from re import template
 from django.shortcuts import render
 
-def Profile(request):
+def profile(request):
     """Display user profile"""
     template = 'profiles/profile.html'
     context = {}
