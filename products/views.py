@@ -1,7 +1,10 @@
+from re import template
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+
+from products.forms import ProductForm
 from .models import Product, Category
 
 
@@ -68,3 +71,14 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_details.html', context)
+
+
+def add_product(request):
+    """Add a new product to the site"""
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+    
+    return render(request, template, context)
