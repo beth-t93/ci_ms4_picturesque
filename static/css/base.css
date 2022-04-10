@@ -53,6 +53,10 @@ body {
     border: 1px solid #FCA311 !important;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .overlay {
     height: 100%;
     width: 100%;
