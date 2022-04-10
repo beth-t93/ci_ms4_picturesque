@@ -1,4 +1,17 @@
-.social-icons {
-    text-decoration: none;
+.socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.socials p:hover {
+    cursor: pointer;
+    transform: scale(1.1); 
+}
+
+.socials p {
     color: #fca311;
+    text-decoration: none;
+    padding: 1.5rem;
+    font-size: 200%;
 }
