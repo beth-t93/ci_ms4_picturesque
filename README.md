@@ -72,40 +72,39 @@ Picturesque is an online print shop for a photographer, it sells prints alongsid
 ### User Requirements and Expectations
 #### Requirements
 - Easy to navigate
-- Appealing design
-- The user will be able to log in to add a route
-- Only the user that added the route origianlly will be able to edit or delete it
-- All users will be able to view the routes on the site.
+- Appealing design that allows the products to stand out
+- The user will be able to purchase items, with and account, but also anonymously
+- Users with an account will be able to store their contact and delivery information
+- All users will be able to view the full range of products
 
 #### Expectations
 - Buttons take you to the page they say they will
-- The add route form will successfully add a route to the database
-- The edit form will successfully edit a route from the database
-- The delete button will successfully delete a route from the database
-- The user will receive feedback from the site when ading or editing a route and logging off
-- Users are able to create an account so they can start adding routes
+- Add to basket will successfully add the item to basket
+- Checkout will successfully take payment for the order
+- The signup link will allow users to create an account
+- Login will allow exisiting users to access their account, including their order history
+- The user will receive feedback from the site when adding an item to basket, updating their basket and checking out
 
 
 ## Scope
 Based on the above information, features to be included in the design include:
 - An easy to navigate homepage with an obvious path to other pages
 - A profile page that is only accessbile to individual users when they log in
-- An add route form which will only be visibale to users when they log in
 - Easily log in and logout of the site with the relevant buttons in the navigation bar
-- Favicon to help users identify the site in any tabs
+- A contact page with links to social media
 
 ## Structure
-A responsive site consisitng of 6 pages and two custom error pages. 3 of the pages are only visible when a user creates a profile.
+A responsive site consisitng of multiple pages, including home, products, contact, profile, log in and create account.
 
-The site will be easy to use across all devices.
+The site will be simple to use across all devices.
 
 ## Design Choices
-The style of the site will be simple and minimal so it remains easy to navigate and allows people to add and edit routes easily.
+The style of the site will be simple and minimal so it remains easy to navigate and allows the products to be the main selling point.
 
 ### Colours
 The colour scheme for this site is meant to be bright and eye catching to the user, however there should still be enough contrast between the colours used so that the site remains easy to read and navigate for longer periods of time.
 
-![images](docs/images/ms3colours.jpg)
+![images]()
 
 I have chosen a colour scheme that is bright and eye-catching to the user, but it still allows the images added to routes by the user to stand out from the page.
 ### Fonts/Typography
