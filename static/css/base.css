@@ -175,6 +175,11 @@ body {
     border-color: #FCA311;
 }
 
+form {
+    display: flex; /* 2. display flex to the rescue */
+    flex-direction: row;
+  }
+
 /* -------------------------------- Allauth */
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */

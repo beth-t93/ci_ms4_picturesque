@@ -13,15 +13,16 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6 text-color text-center">
+            <div class="col-12 text-color text-center">
                 <h2 class="logo-font mb-4">Product Management</h2>
                 <h5 class="text-muted">Add a New Product</h5>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+            <div class="col"></div>
+            <div class="col-6">
+                <form method="POST" action="{% url 'add_product' %}" class="form mb-2 text-color" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}
@@ -35,7 +36,8 @@
                         <button class="btn btn-black rounded-0" type="submit">Add to site</button>
                     </div>
                 </form>
-            </div>            
+            </div>   
+            <div class="col"></div>         
         </div>
     </div>
 {% endblock %}
