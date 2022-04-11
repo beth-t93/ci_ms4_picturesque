@@ -102,13 +102,14 @@ The site will be simple to use across all devices.
 The style of the site will be simple and minimal so it remains easy to navigate and allows the products to be the main selling point.
 
 ### Colours
-The colour scheme for this site is meant to be bright and eye catching to the user, however there should still be enough contrast between the colours used so that the site remains easy to read and navigate for longer periods of time.
 
 ![images]()
 
-I have chosen a colour scheme that is bright and eye-catching to the user, but it still allows the images added to routes by the user to stand out from the page.
+I have chosen a colour scheme that is minimal, but still has a pop of colour to break up the black and white.
 ### Fonts/Typography
-To ensure the website is easily readable while also keeping to the simple and minimal design, the font I have used is Oswald, taken from the Google Fonts library, with sans-serif being the fallback font should either of the selected fonts be unavailable. 
+I have decided to use Mulish, taken from the Google Fonts library, with sans-serif being the fallback font should either of the selected fonts be unavailable. 
+
+This font is clean and easy to read.
 
 ## Skeleton
 
@@ -132,18 +133,24 @@ To ensure the website is easily readable while also keeping to the simple and mi
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/CSS)
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+
 
 ### Frameworks, Libraries and Other Tools
-1. [Affinity Designer](https://affinity.serif.com/en-gb/designer/) was used to create the colour swatch.
-2. [Git](https://git-scm.com/) was used within VS Code for version control to push code to GitHub.
-3. [Github](https://github.com/) was used as a remote repository to store code.
-4. [Am I Responsive](http://ami.responsivedesign.is/) was used to create the mockup you see at the start of this README.md file
-5. [Coolors](https://coolors.co/) was used to help put together the colour scheme used throughout the site.
-6. [Visual Studio Code](https://visualstudio.microsoft.com/) is the IDE I used to develop the project.
-7. [Balsamiq](https://balsamiq.com/) was used to create the wireframes for the site
-8. [Font Awesome](https://fontawesome.com/) was used for the icons throughout the site.
-9. [Google Fonts](https://fonts.google.com/) Oswald was the font used throughout the site.
-10 [Bootstrap](https://getbootstrap.com/) used to create layout and responsive elements.
+1. [Affinity Designer](https://affinity.serif.com/en-gb/designer/)
+2. [Git](https://git-scm.com/)
+3. [Github](https://github.com/)
+4. [Am I Responsive](http://ami.responsivedesign.is/)
+5. [Coolors](https://coolors.co/)
+6. [Visual Studio Code](https://visualstudio.microsoft.com/)
+7. [Balsamiq](https://balsamiq.com/)
+8. [Font Awesome](https://fontawesome.com/)
+9. [Google Fonts](https://fonts.google.com/)
+10. [Bootstrap](https://getbootstrap.com/)
+11. [Django](https://www.djangoproject.com/) 
+12. [AWS](https://aws.amazon.com/?nc2=h_lg)
+13. [Heroku](https://dashboard.heroku.com/login)
+14. [Postgres](https://www.postgresql.org/)
 
 
 ## Features
