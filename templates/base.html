@@ -35,7 +35,7 @@
     {% block extra_js %}
     {% endblock %}
 
-    <link rel="shortcut icon" href="{% static 'favicon/favicon.png' %}"/>
+    <link rel="shortcut icon" href="{{ MEDIA_URL }}favicon.ico"/>
     <title>Picturesque {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
