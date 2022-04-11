@@ -79,6 +79,7 @@ body {
     cursor: pointer;
 }
 
+
 /* -------------------------------- Toasts from Bootstrap */
 
 .message-container {
@@ -174,11 +175,6 @@ body {
     background-color: #FCA311;
     border-color: #FCA311;
 }
-
-form {
-    display: flex; /* 2. display flex to the rescue */
-    flex-direction: row;
-  }
 
 /* -------------------------------- Allauth */
 .allauth-form-inner-content p {
