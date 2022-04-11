@@ -103,7 +103,7 @@ The style of the site will be simple and minimal so it remains easy to navigate 
 
 ### Colours
 
-![images]()
+![images](docs/images/colours.png)
 
 I have chosen a colour scheme that is minimal, but still has a pop of colour to break up the black and white.
 ### Fonts/Typography
