@@ -203,3 +203,5 @@ STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
 
 DEFAULT_FROM_EMAIL = 'picturesque@example.com'
+
+X_FRAME_OPTIONS = 'ALLOW-FROM http://ami.responsivedesign.is/?url='
