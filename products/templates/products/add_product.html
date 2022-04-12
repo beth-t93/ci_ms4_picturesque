@@ -20,8 +20,7 @@
         </div>
 
         <div class="row">
-            <div class="col"></div>
-            <div class="col-6">
+            <div class="col-6 p-3">
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2 text-color" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
@@ -36,8 +35,7 @@
                         <button class="btn btn-black rounded-0" type="submit">Add to site</button>
                     </div>
                 </form>
-            </div>   
-            <div class="col"></div>         
+            </div>         
         </div>
     </div>
 {% endblock %}
