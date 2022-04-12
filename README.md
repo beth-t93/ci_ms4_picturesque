@@ -116,16 +116,22 @@ This font is clean and easy to read.
 ## Surface
 
 ### Wireframes
-- [Index - desktop](docs/wireframes/index-web.pdf)
-- [Index - mobile and tablet](docs/wireframes/index-mobile.pdf)
-- [Login - desktop](docs/wireframes/login-web.pdf)
-- [Login - mobile and tablet](docs/wireframes/login-mobile.pdf)
-- [Register - desktop](docs/wireframes/register-web.pdf)
-- [Register - mobile and tablet](docs/wireframes/register-mobile.pdf)
-- [Profile - desktop](docs/wireframes/profile-web.pdf)
-- [Profile - mobile and tablet](docs/wireframes/profile-mobile.pdf)
-- [Add and Edit Route - desktop](docs/wireframes/add-edit-web.pdf)
-- [Add and Edit Route - mobile and tablet](docs/wireframes/add-edit-mobile.pdf)
+- [Home - desktop](docs/wireframes/Home-desktop.png)
+- [Home - mobile and tablet](docs/wireframes/Home-mobile.png)
+- [Products - desktop](docs/wireframes/Products-desktop.png)
+- [Products - mobile and tablet](docs/wireframes/Products-mobile.png)
+- [Contact - desktop](docs/wireframes/Contact-desktop.png)
+- [Contact - mobile and tablet](docs/wireframes/Contact-mobile.png)
+- [Profile - desktop](docs/wireframes/Profile-desktop.png)
+- [Profile - mobile and tablet](docs/wireframes/Profile-mobile.png)
+- [Login - desktop](docs/wireframes/Login-desktop.png)
+- [Login - mobile and tablet](docs/wireframes/Login-mobile.png)
+- [Basket - desktop](docs/wireframes/Basket-desktop.png)
+- [Basket - mobile and tablet](docs/wireframes/Basket-mobile.png)
+- [Checkout - desktop](docs/wireframes/Checkout-desktop.png)
+- [Checkout - mobile and tablet](docs/wireframes/Checkout-mobile.png)
+- [Checkout Success - desktop](docs/wireframes/Checkout-Success-desktop.png)
+- [Checkout Success - mobile and tablet](docs/wireframes/Checkout-Success-mobile.png)
 
 ## Technologies Used
 
