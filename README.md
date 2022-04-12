@@ -226,64 +226,64 @@ The homepage is made up of:
 13. As a site owner I want to be able to add, edit and delete products in the store.
 
 
-#### Feature 4 - Add a Route Page
-- This page contains a simple form allowing users to add a route to the site.
+#### Feature 4 - User Profile
+- This page contains a simple form allowing users to add or update their saved delivery information
+- It also allows users to see their order history
+
+##### Saved Information and order history
+![images](docs/features/Saved-info.png)
+![images](docs/features/order-history.png)
+- This table allows users with an account to save their delivery information for a faster checkout experience with any other orders
+
+###### User stories covered by this feautre:
+5. As a visitor I would like to be able to see my order history
 
 
-#### Feature 5 - Edit a Route Page
-- This page contains a simple form allowing users to edit and exisiting route.
+#### Feature 5 - Basket Page
+- This page allows users to procedd to checkout with their items
 
-##### Edit Route Form
-![images](docs/features/feature-edit-form.png)
-- This lets the easily edit a route they have already added to the site.
-- The form is pre-populated with the routes exisiting information.
+##### Item information and totals
+![images](docs/features/checkout.png)
+- Users can easily adjust item quantities using the plus and minus buttons, or delete by using the delete button
+- Users can clearly see how much their order will cost before and after delivery.
 
 ###### User stories covered by this feautre:
 1. As a visitor I want the site to be easy and simple to use.
-5. As a visitor I would like to be able to update routes I have already added to the site
-9. As a site owner I want users to be able to view, add, edit and delete routes on the site.
+4. As a visitor I would like to be able to add a product to my basket and checkout
+6. As a visitor I would like to be able to adjust the quantity of items in the basket
 
 
-#### Feature 6 - Profile Page
-- This page contains a breif introduction, informing the user they are on their profile page.
-- The page also displays all the routes that the user has added, with the addidition of edit and delete buttons on each card.
+#### Feature 6 - Checkout Page
+- This page allows users to checkout using stripe
+- It allows the user to inout their delivery and contact information
+- Once completed there is a toast confirming the order, as well as email feedback
 
-##### Introduction
-![images](docs/features/feature-profile-intro.png)
-- This lets the user know where they are on the site quickly and easily. It also tells the user what they can do on this page.
-
-###### User stories covered by this feautre:
-1. As a visitor I want the site to be easy and simple to use.
-10. As a site owner I want the purpose of the site to be clear to each user.
-
-##### Routes
-![images](docs/features/feature-profile-cards.png)
-- This allows the user to see the routes they have added with all the details easy to see and read through.
+##### Checkout information and details
+![images](docs/features/checkout-information.png)
+- This page is clean and easy to follow
+- It shows the details of your order before you complete it
+- There is instant feedback once the order is completed, as well as feedback via email
 
 ###### User stories covered by this feautre:
 1. As a visitor I want the site to be easy and simple to use.
-2. As a visitor I want the site to be colourful and eye-catching, as well as be easy to read.
-7. As a visitor I would like to be able to see an image from the route
+7. As a visitor I would like to receive an order confirmation after checkout
+8. As a visitor I would like to receive an email confirmation of my order
 
-##### Edit and Delete Buttons
-![images]( docs/features/feature-profile-edit-delete.png)
-- This allows the user to edit or delete a route from their profile.
-- This feature is only accessible if the user is logged in.
-- Users can only edit and delete routes they have added themselves.
+#### Feature 7 - Contact Page
+- This page allows users to find contact information for Picturesque
+
+##### Checkout information and details
+![images](docs/features/contact.png)
+- This page contains all the contact information for Picturesque
+- There are direct links to all social media channels
 
 ###### User stories covered by this feautre:
-1. As a visitor I want the site to be easy and simple to use.
-5. As a visitor I would like to be able to update routes I have already added to the site
-6. As a visitor I would like to be able to delete routes I have previously added to the site
-9. As a site owner I want users to be able to view, add, edit and delete routes on the site.
-
+9. As a visitor I would like to easily find Picturesque's contact information, social media and find out who they are
 
 ## Future Features
-In the future I would add the ability to map out each route so users can easily follow a specific route, that is then supported by the instructions given in the route description.
+In the future I would like to add the functionality to turn part of the site into a print on demand site, so users can then upload their own files to get printed.
 
-I would also add a feature where users could comment on eachothers routes, creating a community feel on the site.
-
-The area covered would also expand, as the routes on the site are currently all in North Wales.
+I would also add customer reviews of each item.
 
 ## Information Architecture
 ### Data Storage
