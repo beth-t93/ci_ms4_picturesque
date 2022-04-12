@@ -22,11 +22,8 @@
 - [Features](#features)
 - [Future Features](#future-features)
 - [Information Architecture](#information-architecture)
-- [Validation and Testing](#validation-and-testing)
-    - [HTML Validation](#html-validation)
-    - [CSS Validation](#css-validation)
-    - [Python Validation](#python-validation)
-    - [Performance](#performance)
+- [Testing](#testing)
+    - [Manual Testin](#manual-testing)
     - [Testing on Other Devices](#testing-on-other-devices)
     - [Testing of User Stories](#testing-of-user-stories)
 - [Bugs](#bugs)
@@ -605,65 +602,79 @@ All elements on this page are displayed and responsive
     
     | Feature | Action | Expected Result | Actual Result |
     | ------- | ------ | --------------- | ------------- |
-    | Simple, easy to use design | User is able to navigate to all parts of the site | User is able to successfully complete the quiz easily | Works as expected |
+    | Simple, easy to use design | User is able to navigate to all parts of the site | find and purchase products | Works as expected |
 
-2. As a visitor I want the site to be colourful and eye-catching, as well as be easy to read.
+2. As a visitor I want to be able to search for a product by name or description
     
     | Feature | Action | Expected Result | Actual Result |
     | ------- | ------ | --------------- | ------------- |
-    | Bright colour scheme that is also still legible | All colours used on the site are bright and colourful, but still allow good legibility | Users find the site eye-catching and have no issues with the sites ease of use | Works as expected |
+    | Search bar in main navigation | User can enter search term and it will search product names and descriptions | Users can quickly find items by name or description | Works as expected |
 
-3. As a visitor I would like to be able to add information about new routes easily
-
-    | Feature | Action | Expected Result | Actual Result |
-    | ------- | ------ | --------------- | ------------- |
-    | After login the navigation bar contains an add button | User presses the add button | To be taken to the add routes form | Works as expected |
-
-4. As a visitor I would like to find out about new routes in my area
+3. As a visitor I would like to be able to sort products by name, price or category
 
     | Feature | Action | Expected Result | Actual Result |
     | ------- | ------ | --------------- | ------------- |
-    |  Start/End Point on information cards | The user can easily see an address of where the route starts and ends | User is able to see which routes are local to them | Works as expected |
+    | Filter dropdown on all product pages | User selects filter option | Products will display as directed by the filter | Works as expected |
 
-5. As a visitor I would like to be able to update routes I have already added to the site
-
-    | Feature | Action | Expected Result | Actual Result |
-    | ------- | ------ | --------------- | ------------- |
-    | On the profile page each route has an edit button | click edit to be taken to the edit route form | To be taken to the edit form which is prepoulated with the routes information | Works as expected |
-
-6. As a visitor I would like to be able to delete routes I have previously added to the site
+4. As a visitor I would like to be able to add a product to my basket and checkout
 
     | Feature | Action | Expected Result | Actual Result |
     | ------- | ------ | --------------- | ------------- |
-    | On the profile page each card has a delete button | Click the delete button | The route is deleted from the site and database | Works as expected |
+    | Add to bag button on product details page | User clicks button | Product is added to basket, and toast appears telling the user the item has been added | Works as expected |
+    | Checkout button in Basket | User clicks button | User is taken to checkout page, where they can add their details and get the order processed. | Works as expected
 
-7. As a visitor I would like to be able to see an image from the route
-
-    | Feature | Action | Expected Result | Actual Result |
-    | ------- | ------ | --------------- | ------------- |
-    | Ablility to add image via URL to each route | The user is able to see the image on each card | The user can easily see an image with each route |  Works as expected|
-
-8. As a site owner I want the site to be easy to use.
+5. As a visitor I would like to be able to see my order history
 
     | Feature | Action | Expected Result | Actual Result |
     | ------- | ------ | --------------- | ------------- |
-    | Simple page design | Easily see which button you need to press to progress through the site | The user can easily navigate the site | Works as expected |
+    | Order history on profile page | User goes to profile page | All order history is listed, clicking the order number takes you to that order confirmation with feedback telling you when the confirmation email was sent | Works as expected |
 
-
-9. As a site owner I want users to be able to view, add, edit and delete routes on the site.
-
-    | Feature | Action | Expected Result | Actual Result |
-    | ------- | ------ | --------------- | ------------- |
-    | The homepage and the user profile display the routes | Users can easily see the routes on the site | Users can easily see routes on the site | Works as expected |
-    | The edt and delete buttons on each route on the profile page | Users can easily navigate to edit or delte their routes | Users are able to successfully edit or delete routes | Works as expected |
-
-
-10. As a site owner I want the purpose of the site to be clear to each user.
+6. As a visitor I would like to be able to adjust the quantity of items in the basket
 
     | Feature | Action | Expected Result | Actual Result |
     | ------- | ------ | --------------- | ------------- |
-    | Hero Text, page headings and flashes | Each page is clearly labelled with headings or messages telling the user where they are or what action they have just completed | Users can easily see where they are up to on the site | Works as expected |
+    | plus and minus quantity buttons in the basket | Click | The quantity can be updated with values between 1 and 99 | Works as expected |
 
+7. As a visitor I would like to receive an order confirmation after checkout
+8. As a visitor I would like to receive an email confirmation of my order
+
+    | Feature | Action | Expected Result | Actual Result |
+    | ------- | ------ | --------------- | ------------- |
+    | Order confirmation page | User checkouts their order | Page with all the order details and a message saying an email hgas been sent opens |  Works as expected|
+
+9. As a visitor I would like to easily find Picturesque's contact information, social media and find out who they are
+
+    | Feature | Action | Expected Result | Actual Result |
+    | ------- | ------ | --------------- | ------------- |
+    | Navigate to the contact page | click | Contact page with all contact info and links to social media opens | Works as expected |
+
+
+10. As a site owner I want the site to be easy to use
+
+    | Feature | Action | Expected Result | Actual Result |
+    | ------- | ------ | --------------- | ------------- |
+    | Simple, easy to use design | User is able to navigate to all parts of the site | find and purchase products | Works as expected |
+
+11. As a site owner I want the site to be clean and simple, allowing the products to stand out
+
+    | Feature | Action | Expected Result | Actual Result |
+    | ------- | ------ | --------------- | ------------- |
+    | Simple, easy to use design, and muted colour scheme | User is able to easily see the products | find and purchase products | Works as expected |
+
+12. As a site owner I want the purpose of the site to be clear to each user.
+
+    | Feature | Action | Expected Result | Actual Result |
+    | ------- | ------ | --------------- | ------------- |
+    | Homepage with some company information | The user is able to see this information when they open the page | know the purpose of the site | Works as expected |
+
+13. As a site owner I want to be able to add, edit and delete products in the store.
+
+    | Feature | Action | Expected Result | Actual Result |
+    | ------- | ------ | --------------- | ------------- |
+    | Add products link in profile dropdown  | Superusers are able to click this link | Be taken to the add product page | Works as expected |
+    | Edit product button | Superusers can see this for each item, either in the all products view or the product details view | Be taken to the edit product page | Works as expected |
+    | Edit product button | Superusers can see this for each item, either in the all products view or the product details view | Delete an item | Works as expected |
+    
 ## Bugs
 - Bug : Data storing as null in the database when added through the site
 - Fix: update inputs with names
