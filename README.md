@@ -1,6 +1,6 @@
 ![images](docs/images/amiresponsive.png)
 
-[View the deployed site here]('https://picturesque-ms4.herokuapp.com/')
+[View the deployed site here](https://picturesque-ms4.herokuapp.com/)
 
 ## Table of Contents
 
@@ -23,7 +23,7 @@
 - [Future Features](#future-features)
 - [Information Architecture](#information-architecture)
 - [Testing](#testing)
-    - [Manual Testin](#manual-testing)
+    - [Manual Testing](#manual-testing)
     - [Testing on Other Devices](#testing-on-other-devices)
     - [Testing of User Stories](#testing-of-user-stories)
 - [Bugs](#bugs)
