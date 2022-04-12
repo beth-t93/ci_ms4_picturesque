@@ -55,19 +55,19 @@ Picturesque is an online print shop for a photographer, it sells prints alongsid
 #### Visitor Goals
 1. As a visitor I want the site to be easy and simple to use.
 2. As a visitor I want to be able to search for a product by name or description
-3. As a visitor I would like to be able to sort products by name, price or cateogry
+3. As a visitor I would like to be able to sort products by name, price or category
 4. As a visitor I would like to be able to add a product to my basket and checkout
 5. As a visitor I would like to be able to see my order history
 6. As a visitor I would like to be able to adjust the quantity of items in the basket
 7. As a visitor I would like to receive an order confirmation after checkout
 8. As a visitor I would like to receive an email confirmation of my order
-9. As a visitor I would like to easily find Picturesque's contact information and social media
+9. As a visitor I would like to easily find Picturesque's contact information, social media and find out who they are
 
 #### Site Owner Goals
-9. As a site owner I want the site to be easy to use.
-10. As a site owner I want the site to be clean and simple, allowing the products to stand out
-11. As a site owner I want the purpose of the site to be clear to each user.
-12. As a site owner I want to be able to add, edit and delte products in the store.
+10. As a site owner I want the site to be easy to use.
+11. As a site owner I want the site to be clean and simple, allowing the products to stand out
+12. As a site owner I want the purpose of the site to be clear to each user.
+13. As a site owner I want to be able to add, edit and delete products in the store.
 
 ### User Requirements and Expectations
 #### Requirements
@@ -160,77 +160,74 @@ This font is clean and easy to read.
 
 
 ## Features
+
+#### Common Features
+##### 1. Navigation and Page Header
+![images](docs/features/nav-page-header.png)
+- This is a feautre that is seen on every page
+- Each part is east to read, and provides simple explanations of where each link will take you
+- The search bar will search product names and descriptions
+###### User stories covered by this feautre:
+1. As a visitor I want the site to be easy and simple to use.
+2. As a visitor I want to be able to search for a product by name or description
+9. As a visitor I would like to easily find Picturesque's contact information and social media
+10. As a site owner I want the site to be easy to use.
+11. As a site owner I want the site to be clean and simple, allowing the products to stand out
+12. As a site owner I want the purpose of the site to be clear to each user.
+
 #### Feature 1 - Homepage
 The homepage is made up of:
-1. The navigation bar
-2. The hero image and text
-3. The cards containing information about the routes
-##### 1. Navigation
-![images](docs/features/feature-nav.png)
-- This is the first thing you see when you get to the site so I decided this needed to be easy to read to allow the user to successfully navigate through the site.
-- As I wanted to keep the logo simple I used text only, in a bold, striking font.
-- The navigation links are relevant and change depending on if the user is logged in or not.
+1. Image Carousel
+2. A summary of Picturesque
+##### 1. Image Carousel
+![images](docs/features/carousel.png)
+- I used the Boostrap component for this element
+- It gives users a hint of the kind of images that are sold on the site
+- It is eyecatching and will draw the users attention
 ###### User stories covered by this feautre:
-1. As a visitor I want the site to be easy and simple to use.
-2. As a visitor I want the site to be colourful and eye-catching, as well as be easy to read.
-3. As a visitor I would like to be able to add information about new routes easily
-8. As a site owner I want the site to be easy to use.
+11. As a site owner I want the site to be clean and simple, allowing the products to stand out
 
-##### 2. Hero Text and Image
-![images](docs/features/feature-heroimage.png)
-- This feature clearly tells the user what the site is about.
-- The text is legible and easy to read due to the shadow added to the image.
+##### 2. A summary of picturesque
+![images](docs/features/company-info.png)
+- This feature tells the user what Picturesque is
+- The font is clear and easy to read 
 ###### User stories covered by this feautre:
-1. As a visitor I want the site to be easy and simple to use.
-2. As a visitor I want the site to be colourful and eye-catching, as well as be easy to read.
-10. As a site owner I want the purpose of the site to be clear to each user.
-
-##### 3. Cards containing information about the route
-![images](docs/features/feature-cards.png)
-- This is where all the information added by users will be displayed.
-- The design means key information, such as the start and end point are clear and easy to find.
-###### User stories covered by this feautre:
-2. As a visitor I want the site to be colourful and eye-catching, as well as be easy to read.
-4. As a visitor I would like to find out about new routes in my area
-7. As a visitor I would like to be able to see an image from the route
-9. As a site owner I want users to be able to view, add, edit and delete routes on the site.
+9. As a visitor I would like to easily find Picturesque's contact information, social media and find out who they are
+12. As a site owner I want the purpose of the site to be clear to each user.
 
 
-#### Feature 2 - Login Page
-- This page contains a simple form allowing users to log in to the site.
--There is also a link directing users who do not have an acount to register
+#### Feature 2 - All Products Pages
+- This page contains all of the products available to purchase
+- There are two further pages that split the items into their respective category
+- For superusers there is an option to edit or delete an item at the bottom of each listing
 
-##### Login Form
-![images](docs/features/feature-login.png)
-- This lets the user easily login to their account.
+##### Product Filter
+![images](docs/features/product-filter.png)
+- This lets the user filter the products by name, price or category
 
 ###### User stories covered by this feautre:
-1. As a visitor I want the site to be easy and simple to use.
+3. As a visitor I would like to be able to sort products by name, price or category
+13. As a site owner I want to be able to add, edit and delete products in the store.
 
 
-#### Feature 3 - Register Page
-- This page contains a simple form allowing users to register.
-- There is also a link directing users who already have an account to login.
+#### Feature 3 - Product Details Page
+- This page contains all the information about the product.
+- There is the option to add the item to bag
+- For superusers the option to edit or delete the item is on this page
 
-##### Register Form
-![images](docs/features/feature-register.png)
-- This lets the user register an account.
+##### Product Details
+![images](docs/features/product_details.png)
+- This page is simple and easy to read
+- The dropdown allows users to select the size print they would like to purchase
+- The add to basket button allows users to add items to basket
 
 ###### User stories covered by this feautre:
-1. As a visitor I want the site to be easy and simple to use.
+4. As a visitor I would like to be able to add a product to my basket and checkout
+13. As a site owner I want to be able to add, edit and delete products in the store.
 
 
 #### Feature 4 - Add a Route Page
 - This page contains a simple form allowing users to add a route to the site.
-
-##### Add Route Form
-![images](docs/features/feature-add-form.png)
-- This lets the easily add a route with all the relevant information to the site.
-
-###### User stories covered by this feautre:
-1. As a visitor I want the site to be easy and simple to use.
-3. As a visitor I would like to be able to add information about new routes easily
-9. As a site owner I want users to be able to view, add, edit and delete routes on the site.
 
 
 #### Feature 5 - Edit a Route Page
