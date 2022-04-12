@@ -288,22 +288,23 @@ I would also add customer reviews of each item.
 ## Information Architecture
 ### Data Storage
 - User Information
-| Title            | Key In Database | Form Validation | Data Type |
-|------------------|-----------------|-----------------|-----------|
-| Account id       | _id             | No Validation   | Primary Key  |
-| Full Name      | full_name      | max length 20 | CharField |
-| E-mail Address   | email           | Must contain @ & .com etc | Email |
-| Street Address   | default_street_address1 | max length 128 | CharField  |
-| Street Address 2 | default_street_address2 | max length 128 | CharField  |
-| City Or Town     | default_town_or_city    | max length 128 | CharField  |
-| County/State     | default_county     | max length 64 | CharField  |
-| Postal Code      | default_postcode      | max length 12 | CharField  |
-| Contact Number   | default_telephone_number | Number max length 20 | CharField  |
-| Country          | country         | pycountry select  | Option    |
+
+| Title | Key In Database | Form Validation | Data Type |
+|--------|--------|--------|--------|
+| Account id | _id | No Validation | Primary Key |
+| Full Name | full_name | max length 20 | CharField |
+| E-mail Address | email | Must contain @ & .com etc | Email |
+| Street Address | default_street_address1 | max length 128 | CharField |
+| Street Address 2 | default_street_address2 | max length 128 | CharField |
+| City Or Town | default_town_or_city | max length 128 | CharField |
+| County/State | default_county | max length 64 | CharField |
+| Postal Code | default_postcode | max length 12 | CharField |
+| Contact Number | default_telephone_number | Number max length 20 | CharField |
+| Country | country | pycountry select  | Option |
 
 - Product information 
 
-    | Title              | Key In Database | Form Validation | Data Type |
+| Title              | Key In Database | Form Validation | Data Type |
 |--------------------|-----------------|-----------------|-----------|
 | Product Id         | _id             | No Validation   | Primary Key  |
 | Product Name       | name            | max length 254 | CharField |
@@ -316,12 +317,13 @@ I would also add customer reviews of each item.
 | Image              | image           | Null True Blank True | ImageField |
 
 - Orders Information
+
 |     Title    | Key In Database |    Form Validation    |  Data Type  |
-|------------|---------------|---------------------|-----------|
-| Order Number | order_number    | No Validation         | Primary Key |
-| User Profile | user_profile    | text                  | Foreign Key |
-| Full Name  | full_name      | max length 100 | CharField   |
-| email        | email           | max length 100 | CharField   |
+|--------|-----------|---------------------|-----------|
+| Order Number | order_number | No Validation | Primary Key |
+| User Profile | user_profile | text | Foreign Key |
+| Full Name | full_name | max length 100 | CharField   |
+| email | email | max length 100 | CharField   |
 | telephone Number | telephone_number | max length 20 | CharField |
 | street address 1| street_address1 | max length 100 | CharField |
 | street address 2 | street_address2 | max length 100 | CharField |
