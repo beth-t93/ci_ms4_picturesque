@@ -676,17 +676,17 @@ All elements on this page are displayed and responsive
     | Edit product button | Superusers can see this for each item, either in the all products view or the product details view | Delete an item | Works as expected |
     
 ## Bugs
-- Bug : Data storing as null in the database when added through the site
-- Fix: update inputs with names
+- Bug : Products not showing
+- Fix: move products.html into the correct subfolder
 
-- Bug: Edit and delete buttons being displayed outside the card
-- Fix: Edit the structure of the divs on the page
+- Bug: Product detail page blank
+- Fix: fix spelling error in code linking to views.py
 
-- Bug: SSL error causing communication errors with the database
-- Fix: Reinstall and update python
+- Bug: Sort by category filter error
+- Fix: change sortkey from category_name to category in views.py
 
-- Bug: URl errors with specific id's
-- Fix: Restrucuture python routes ensuring all names are different
+- Bug: Stripe payments not going through
+- Fix: Adding Webhook secret to Heroku config vars and .env file
 
 
 ## Deployment
@@ -712,78 +712,6 @@ This site is deployed using GitHub pages, this was the process:
 5. In the terminal type 'git clone' and the url
 6. Press enter for the clone to be created.
 
-### Create the Flask Application
-1. Install Flask - type in terminal:
-
-``` 
-pip3 install Flask 
-```
-
-2. Now we need to create a few new files. First, our Python file that will be the foundation of our application. You can name it something else, in this case, I used app.py, so type in the terminal:
-
-```
-touch app.py
-```
-
-3. Next, we will be storing some sensitive data, and we need to hide them using environment variables. You can use the terminal or just create a new file. I used the terminal, so type in the terminal:
-
-```
-touch .env
-```
-
-4. That file should never be pushed to GitHub, so we need to be able to ignore it somehow, so type in the terminal:
-
-```
-touch .gitignore
-```
-
-5. Double check in the gitignore file that you see ".env" and "pycache/"
-6. Go to the env.py file and add the following:
-
-```
-import os
-os.environ["PORT"] = "5000"
-os.environ["SECRET_KEY"] = "YOUR_SECRET_KEY"
-os.environ["DEBUG"] = "True"
-os.environ["MONGO_URI"] = "YOUR_MONGODB_URI"
-os.environ["MONGO_DBNAME"]= "DATABASE_NAME"
-```
-
-7. Go to app.py file and import the following:
-
-```
-import os
-from flask import (Flask, render_template, redirect, request,
-url_for, session, flash)
-from flask_pymongo import PyMongo
-from bson.objectid import ObjectId
-from werkzeug.security import generate_password_hash, check_password_hash
-from os import environ, path
-from dotenv import load_dotenv
-from pathlib import Path
-```
-
-8. Create an instance of Flask
-
-```
-app = Flask(__name__)
-```
-
-9. To test your application, tell your app how and where to run your application. Set your IP and PORT environment variables in the hidden .env file. Make sure to update this to debug=False before the actual deployment of your project.
-
-```
-if __name__ == "__main__":
-app.run(host=os.environ.get("IP"),
-port=int(os.environ.get("PORT")),
-debug=True)
-```
-
-10. You can now run your application, type in the terminal:
-
-```
-python3 app.py
-```
-
 ### Deploying to Heroku
 1. In the workspace terminal, run pip3 freeze --local > requirements.txt to collect any dependencies.
 2. Run python app.py > Procfile to create a Procfile required for Heroku deployment.
@@ -796,15 +724,172 @@ python3 app.py
 9. In Heroku, select 'Automatic Deploys' to automatically rebuild the app when a new Git commit is pushed.
 10. Once the initial build is complete, click 'Open App' in the top right of the screen to view the application.
 
+### Setting up an S3 Bucket
+
+1. Create an [Amazon AWS](https://aws.amazon.com/?nc2=h_lg) account
+2. Search for **S3** and create a new bucket name it the same as your Heroku app(picturesque)
+- uncheck block all public access box
+- check "I acknowledge that the current settings might result in this bucket and the objects within becoming public."
+3. Under **Properties > Static**website hosting
+- enable
+- index.html as Index document
+- error.html as Error document
+- save
+4. Under **Permissions > CORS** use:
+
+```
+[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]
+```
+
+5.Under **Permissions > Bucket** Policy:
+- Generate Bucket Policy and take note of **Bucket ARN**
+- Chose **S3 Bucket Policy** as Type of Policy
+- For **Principal**, enter *
+- Actions **Get Object** and **Put Object**
+- Enter **ARN** noted above
+- **Add statement**
+- **Generate policy**
+- Copy the **policy JSON Document** paste into **Edit bucket policy**
+- Add a /* onto the end of the **resource key**
+- Save changes
+6.Under **Access Control List (ACL)**:
+- For **Everyone (public access)**, tick **List**
+- Accept that everyone in the world may access the Bucket
+- Save changes
+
+### Setting up AWS IAM
+
+1. From the **IAM dashboard** within **AWS**, select User Groups:
+- Create new group e.g. picturesque
+- Click through without adding a policy
+- **Create Group**
+2. Select **Policies**:
+- Create policy
+- Under **JSON** tab, click **Import managed policy**
+- Choose **AmazongS3FullAccess**
+- Edit the resource to include the Bucket ARN noted earlier when creating the Bucket Policy:
+
+```
+                "Resource": [
+			                "arn:aws:s3:::picturesque",
+			                "arn:aws:s3:::picturesque/*"
+                ]
+```
+
+- Click **next step** and go to **Review policy**
+- Give the policy a name e.g. picturesque and description
+- **Create Policy**
+3. Go back to **User Groups** and choose the group created earlier
+- Under **Permissions > Add permissions**, choose **Attach Policies** and select the one just created
+- **Add Permissions**
+4. Under **Users:**
+- Choose a user name e.g. picturesque-staticfiles-user
+- Select **Programmatic access** as the **Access type**
+- Click Next
+- Add the user to the Group just created
+- Click Next and **Create User**
+5. **Download the .csv containing the access key and secret access key. This will NOT be available to download again**
+
+### Connecting Django to S3
+
+1. Install boto3 and django-storages
+
+```
+pipenv install boto3
+pipenv install django-storages
+pip freeze > requirements.txt
+```
+
+2. Add 'storages' to settings.py ` INSTALLED_APPS`
+3. Go to settings.py and set the bucket config, 
+
+```
+if "USE_AWS" in os.environ:
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = "picturesque"
+    AWS_S3_REGION_NAME = "eu-west-1"
+    AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+    AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+    AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+```
+
+4. Add the values from the **.csv** you downloaded to your Heroku Config Vars under Settings:
+
+```
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+USE_AWS=True
+```
+5. Delete the `DISABLE_COLLECTSTATIC` variable from your Config Vars and deploy your Heroku app
+
+6. Create custom_storage.py with code below:
+
+```
+from django.conf import settings
+from storages.backends.s3boto3 import S3Boto3Storage
+class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
+```
+
+7. Go to settings.py, set the static and media files storage and location and override static and media urls in production:
+
+```
+# Static and media files
+STATICFILES_STORAGE = "custom_storages.StaticStorage"
+STATICFILES_LOCATION = "static"
+DEFAULT_FILE_STORAGE = "custom_storages.MediaStorage"
+MEDIAFILES_LOCATION = "media"
+# Override static and media URLs in production
+STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/"
+MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/"
+```
+
+8. With your S3 bucket now set up, you can create a new folder called media (at the same level as the newly added static folder) and upload any required media files to it, making sure they are publicly accessible under **Permissions**
+
+9. Add stripe keys in Config Vars in heroku, making sure the name matches settings.py
+
+10. Add stripe webhook endpoint with the deployed site url:
+
+```
+https://picturesque-ms4.herokuapp.com/wh/
+```
+11. Get the new `STRIPE_WH_SECRET` and added it to the config vars.
+
+12. Now your site is fully deployed.
+
+
 ## Credits
 ### Content and Media
-- The Hero image came from Avonne Stalling on [Pexels](https://www.pexels.com/photo/brown-and-gray-mountains-near-body-of-water-under-white-cloudy-sky-4538764/) 
+- The Frame images all came from [Pexels](https://www.pexels.com/)
+    - Frame 1 - Angela Roma
+    - Frame 2 - Ann Poan
+    - Frame 3 - Cottonbro
+    - Frame 4 - Karolina Grabows
+    - Frame 5 - Nadezhda Moryak
+    - Frame 6 - PNW Production
+    - Frame 7 - Polina Kovalev
+    - Frame 8 - Tom Swinnen
+    - Frame 9 - Eva Elijas
 - All other images on the site are taken by me
-- The text on the site was written by me, using local knowledge for the routes
+- The text on the site was written by me
 
 ### Code
-- [Stack Overflow](https://stackoverflow.com/questions/53500221/css-hero-image-height-issue) to fix bug with hero image not displaying properly
-- [Bootstrap](https://getbootstrap.com/) adapted code for forms, navigation, buttons, cards
+- [Bootstrap](https://getbootstrap.com/) for carousel and short hand margin/padding code
 
 ## Acknowledgements
 - To my mentor, Richard Wells for supporting me in completing this project.
