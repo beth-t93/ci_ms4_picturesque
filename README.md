@@ -70,7 +70,7 @@ Picturesque is an online print shop for a photographer, it sells prints alongsid
 #### Requirements
 - Easy to navigate
 - Appealing design that allows the products to stand out
-- The user will be able to purchase items, with and account, but also anonymously
+- The user will be able to purchase items, with an account, but also anonymously
 - Users with an account will be able to store their contact and delivery information
 - All users will be able to view the full range of products
 
@@ -86,7 +86,7 @@ Picturesque is an online print shop for a photographer, it sells prints alongsid
 ## Scope
 Based on the above information, features to be included in the design include:
 - An easy to navigate homepage with an obvious path to other pages
-- A profile page that is only accessbile to individual users when they log in
+- A profile page that is only accessible to individual users when they log in
 - Easily log in and logout of the site with the relevant buttons in the navigation bar
 - A contact page with links to social media
 
@@ -161,8 +161,8 @@ This font is clean and easy to read.
 #### Common Features
 ##### 1. Navigation and Page Header
 ![images](docs/features/nav-page-header.png)
-- This is a feautre that is seen on every page
-- Each part is east to read, and provides simple explanations of where each link will take you
+- This is a feature that is seen on every page
+- Each part is easy to read, and provides simple explanations of where each link will take you
 - The search bar will search product names and descriptions
 ###### User stories covered by this feautre:
 1. As a visitor I want the site to be easy and simple to use.
@@ -178,7 +178,7 @@ The homepage is made up of:
 2. A summary of Picturesque
 ##### 1. Image Carousel
 ![images](docs/features/carousel.png)
-- I used the Boostrap component for this element
+- I used the Bootstrap component for this element
 - It gives users a hint of the kind of images that are sold on the site
 - It is eyecatching and will draw the users attention
 ###### User stories covered by this feautre:
@@ -237,7 +237,7 @@ The homepage is made up of:
 
 
 #### Feature 5 - Basket Page
-- This page allows users to procedd to checkout with their items
+- This page allows users to proceed to checkout with their items
 
 ##### Item information and totals
 ![images](docs/features/checkout.png)
@@ -252,14 +252,14 @@ The homepage is made up of:
 
 #### Feature 6 - Checkout Page
 - This page allows users to checkout using stripe
-- It allows the user to inout their delivery and contact information
+- It allows the user to input their delivery and contact information
 - Once completed there is a toast confirming the order, as well as email feedback
 
 ##### Checkout information and details
 ![images](docs/features/checkout-information.png)
 - This page is clean and easy to follow
 - It shows the details of your order before you complete it
-- There is instant feedback once the order is completed, as well as feedback via email
+- There is instant feedback once the order is complete, as well as feedback via email
 
 ###### User stories covered by this feautre:
 1. As a visitor I want the site to be easy and simple to use.
@@ -584,10 +584,10 @@ All elements on this page are displayed and responsive
 ### Testing on other devices
 
 #### Devices tested:
-- iPhone 12 Pro
+- IPhone 12 Pro
 - Samsung Galaxy s20+
-- iPad Pro 11"
-- 21.5" iMac
+- IPad Pro 11"
+- 21.5" IMac
 - Asus Chromebook Flip C434TA
 
 #### Browser Testing
@@ -640,7 +640,7 @@ All elements on this page are displayed and responsive
 
     | Feature | Action | Expected Result | Actual Result |
     | ------- | ------ | --------------- | ------------- |
-    | Order confirmation page | User checkouts their order | Page with all the order details and a message saying an email hgas been sent opens |  Works as expected|
+    | Order confirmation page | User checks out their order | Page with all the order details and a message saying an email has been sent opens |  Works as expected|
 
 9. As a visitor I would like to easily find Picturesque's contact information, social media and find out who they are
 
@@ -692,7 +692,7 @@ All elements on this page are displayed and responsive
 ## Deployment
 ### Github Pages
 This site is deployed using GitHub pages, this was the process:
-1. Log in and selected my MS2 repository
+1. Logged in and selected my MS4 repository
 2. Go to settings in the repository
 3. Go to 'Pages" in the menu
 4. Click 'source'
@@ -727,7 +727,7 @@ This site is deployed using GitHub pages, this was the process:
 ### Setting up an S3 Bucket
 
 1. Create an [Amazon AWS](https://aws.amazon.com/?nc2=h_lg) account
-2. Search for **S3** and create a new bucket name it the same as your Heroku app(picturesque)
+2. Search for **S3** and create a new bucket that matches your Heroku app name(picturesque)
 - uncheck block all public access box
 - check "I acknowledge that the current settings might result in this bucket and the objects within becoming public."
 3. Under **Properties > Static**website hosting
@@ -765,7 +765,7 @@ This site is deployed using GitHub pages, this was the process:
 - Copy the **policy JSON Document** paste into **Edit bucket policy**
 - Add a /* onto the end of the **resource key**
 - Save changes
-6.Under **Access Control List (ACL)**:
+6. Under **Access Control List (ACL)**:
 - For **Everyone (public access)**, tick **List**
 - Accept that everyone in the world may access the Bucket
 - Save changes
