@@ -335,31 +335,253 @@ I would also add customer reviews of each item.
 | Grand total  | grand_total     | max digits 10 | DecimalField    |
 
 
-## Validation and Testing
+## Testing
 
-### HTML Validation
-I used the [W3C Markup Validation Service](https://validator.w3.org/) to validate the HTML of the website.
+### Manual Testing
 
-- [Index](docs/validation/html/index.png)
-- [Login](docs/validation/html/login.png)
-- [Add a route](docs/validation/html/login.png)
-### CSS Validation
-I used the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate the CSS of the website.
+#### **Navigation**
 
-- [CSS](docs/validation/css/css.png)
+| **Element** | **Action**|  **Expected Result** |  **Pass/Fail** |
+|---|---|---|---|
+|  **Navbar** |   |   |   |
+|  Logo/Site name | click  | redirect to home page  |  Pass |
+|  Searchbar |  Enter a query | display products related to that query  |  Pass |
+|  Searchbar Icon| click | submit query | Pass |
+|  My Accout Icon dropdown | click  |  display a dropdow list |  Pass |
+|  Register |  click |  redirect to sign up page | Pass   |
+| Log in  |  click | redirect to sign in page    | Pass   |
+| My Profile |  click |  redirect to my profile page | Pass   |
+|   |   | (only when user is logged in)  | Pass  |
+| Log out  | click  | Confirm log out page  | Pass  |
+|   |   | (only when user is logged in)  | Pass  |
+| Add Product  | click   |  redirect to add product page | Pass  |
+|   |   | (only when superuser is logged in)  | Pass  |
+| Bag Icon  | click  | redirect to bag page  | Pass  |
+| **MainNav**  |   |   |   |
+| Home |  click | redirect to home page   | Pass   |
+| All Items  | click  | redirect to Products page showing all items  | Pass   |
+| Prints  | click   | redirect to Products page showing items in the prints category  | Pass  |
+| Frames |  click | redirect to Products page showing items in the frames category   |  Pass |
+| Contact  | click   | redirect to contact page  | Pass |
+| **MobileNav**  |   |   |   |
+| Hamburger Icon  |  click | open mobile  | Pass  |
+| Search Icon  | click  | open search bar as is on mainNav  |  Pass |
+|  My Accout Icon dropdown | click  |  display a dropdow list |  Pass |
+|  Register |  click |  redirect to sign up page | Pass   |
+| Log in  |  click | redirect to sign in page    | Pass   |
+| My Profile |  click |  redirect to my profile page | Pass   |
+|   |   | (only when user is logged in)  | Pass  |
+| Log out  | click  | Confirm log out page  | Pass  |
+|   |   | (only when user is logged in)  | Pass  |
+| Add Product  | click   |  redirect to add product page | Pass  |
+|   |   | (only when superuser is logged in)  | Pass  |
+| Bag Icon  | click  | redirect to bag page  | Pass  |
+| Home |  click | redirect to home page   | Pass   |
+| All Items  | click  | redirect to Products page showing all items  | Pass   |
+| Prints  | click   | redirect to Products page showing items in the prints category  | Pass  |
+| Frames |  click | redirect to Products page showing items in the frames category   |  Pass |
+| Contact  | click   | redirect to contact page  | Pass |
 
-### Python Validation
-I used [PEP8 online](http://pep8online.com/) and [Extends Class](https://extendsclass.com/python-tester.html) to vaildate the Python of the site
+### **Home Page**
 
-- [PEP8](docs/validation/python/PEP8.png)
-- [Extends Class](docs/validation/python/Python-Syntax.png) - Shows 0 syntax errors
+All elements on this page are displayed and responsive
 
-### Performance
-I used [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) to measure the performance and speed of my website.
+### **Contact Page**
 
-- [Index](docs/validation/lighthouse/lighthouse-index.png)
-- [Profile](docs/validation/lighthouse/lighthouse-profile.png)
+| **Element** | **Action**|  **Expected Result** |  **Pass/Fail** |
+|---|---|---|---|
+| Social Media Icons  | click  | redirect users to the relevant page in a new tab  | Pass  |
 
+### **All Items Page**
+
+| **Element** | **Action**|  **Expected Result** |  **Pass/Fail** |
+|---|---|---|---|
+| Sorting bar  | click  | sort products by specific query  |  Pass |
+| Product Image  | click  | redirect user to that specific product detail page   | Pass  |
+| Back to Top button  | click  | pop the view back to the top of the page  | Pass  |
+| *When a superuser logged in*  |   |   |   |
+| Edit/Delete link shows  |   |   |   |
+| Edit  | click  | redirect user to edit product page  | Pass  |
+| Delete  | click  | a toast telling the user the product has been deleted appears  | Pass  |
+
+### **Product Detail Page**
+
+| **Element** | **Action**|  **Expected Result** |  **Pass/Fail** |
+|---|---|---|---|
+| Image  | Click  | open up the image in a seperate page  | Pass |
+| Select Input/Size   | click  | shows the corresponding value   | Pass  |
+| Add to bag  |  click |  add item to the shopping bag with the variation value and redirect to the bag page | Pass  |
+| Go back button  | click  | redirect user to all products page  | Pass  |
+
+### **Shopping Bag Page**
+
+| **Element** | **Action**|  **Expected Result** |  **Pass/Fail** |
+|---|---|---|---|
+|**No bag items**  |   |   |   |
+| Keep shopping button  | click  | redirect to all products page  | Pass  |
+| **Bag items** |   |   |   |
+| Toast message  | None  | pop up with a success message  | Pass  |
+| Product name  | click  | redirect user to product detail page  | Pass  | 
+|  Minus Button | click(when there are more than 1 such items in the bag)  | reduce the item quantity by 1, Toast sucess message shows with a shopping bag preview | Pass  |
+|  Minus Button | click(when there is 1 such items in the bag)  | nothing, user cannot add negative values to the basket | Pass  |
+| Plus Button | click  | increase the lineitem quantity by 1, toast success message shows up | Pass  |
+| Update Button  | click  | Update all other values in the basket  | Pass  |
+| Delete Button  | click  | a confirm deletion modal pops up  | Pass  |
+|   | press ok  | delete the lineitem from the shopping bag  |   |
+| Secure Checkout button  | click(user logged in)  | redirect to the checkout page(if save_info, form populated with user info) | Pass  |
+| Secure Checkout button  | click(user  not logged in)  | redirect to the checkout page (blank form) | Pass  |
+| Keep shopping button  | click  | redirect to all products page  | Pass  |
+
+### **Checkout Page**
+
+| **Element** | **Action**|  **Expected Result** |  **Pass/Fail** |
+|---|---|---|---|
+| Details and Delivery Form  | (if not logged in) Fill in  | on submit, data will be saved with the order  | Pass  |
+| Details and Delivery Form  | (if logged in) Fill in  | form will be prepopulated if saved data available. On submit, data will be saved with the order  | Pass  |
+| Create account link | (if not logged in) click  | will take user to signup page  | Pass  |
+| Already have an account link | (if not logged in) click  | will take user to login page  | Pass  |
+| Payment card input   | input invalid card number  | error message on field  | Pass  |
+|   | input invalid card date  | erroor message on field  | Pass  |
+|   | Onload (user not logged in)  | shown  |  Pass |
+
+
+### **Checkout Success Page**
+
+| **Element** | **Action**|  **Expected Result** |  **Pass/Fail** |
+|---|---|---|---|
+| Toast message  | None  | success messages  | Pass  |
+
+## **Profile Page**
+
+| **Element** | **Action**|  **Expected Result** |  **Pass/Fail** |
+|---|---|---|---|
+| Form fields  | Onload | fields populated with user default info(if previously saved)  | Pass  |
+| All input fields  |  leave blank | on submit: form submit  |  Pass |
+|   | just whitespace | leave blank  |  on submit: form submit |  Pass   |
+|   | fill in correctly   | leave blank  |  on submit: form submit | Pass |
+| Form dropdown  | click  | show dropdown options  | Pass  |
+| Update button  | click  | Form submits  | Pass  |
+|   |   | Form updated toast message appears  | Pass  |
+| Previous order number  | click  | redirect to previous order checkout success page  | Pass  |
+
+### **Previous Order checkout success page**
+
+| **Element** | **Action**|  **Expected Result** |  **Pass/Fail** |
+|---|---|---|---|
+| Toast message  | Onload | alert message inform the user this is a previous order  | Pass  |
+| Back to profile Button  | click  | redirect to profile page  | Pass  |
+
+### **Product Admin - Add product Page**
+
+| **Element** | **Action**|  **Expected Result** |  **Pass/Fail** |
+|---|---|---|---|
+| Category Form dropdown  | click  | display all categories  | Pass  |
+| SKU Text input  | Fill in | display all categories  | Pass  |
+| Name Form Text Input (if required)  |Leave blank|On Submit: Warning appears, form won't submit |Pass  |
+| Name Form Text Input (if required)  |Fill In    |On Submit: Form submit          |Pass  |
+| Description Text Field | Fill in | On Submit: Form submit | Pass |
+| Has Sizes Dropdown | Select Option | On Submit: Form submit | Pass |
+| Price Form Text Input (if required)  |Leave blank|On Submit: Warning appears, form won't submit |Pass  |
+| Price Form Text Input (if required)  |Fill In    |On Submit: Form submit          |Pass  |
+| Image select button | click | Add image to product | Pass |
+| Cancel Button | click | send user back to all  products without saving any changes | Pass |
+| Add to site Button | click | Saves new item and redirects to the products page | Pass |
+
+### **Product Admin - Edit product Page**
+
+| Element                       | Action    | Expected Result                | Pass/Fail |
+|-------------                 |----------|-----                          |-----|
+|All form fields                |On load    |Populated with original values  |Pass  |
+|Form Dropdowns             |Click      |Show dropdown options           |Pass  |
+|Name Text Input (if required)  |Leave blank|On Submit: Warning appears, form won't submit |Pass  |
+|Name Text Input (if required)  |Fill In    |On Submit: Form submit          |Pass  |
+| Price Form Text Input (if required)  |Leave blank|On Submit: Warning appears, form won't submit |Pass  |
+| Price Form Text Input (if required)  |Fill In    |On Submit: Form submit          |Pass  |
+|Form image Select button       |Click      |Open device storage             |Pass  |
+|                               |           |New image name displayed        |Pass  |
+|Cancel button                  |Click      |Redirect to products page       |Pass  |
+|Update Product button(form valid)|Click    |Form submit                     |Pass  |
+|                               |           |Redirect to product detail page |Pass  |
+|                               |           |Product updated toast appears   |Pass  |
+|Update Product button(form invalid)|Click  |Form doesn't submit             |Pass  |
+|                               |           |Error messages on invalid fields|Pass  |
+
+### **Alluth Pages**
+
+| Element                   | Action | Expected Result                   | Pass/Fail |
+|:-------------             |:-------|:---------------------------------------|:-----|
+|**Register**               |        |                                        |      |
+|Sign in link               |Click   |Redirect to sign in page                |Pass  |
+|*Form*                     |        |                                        |      |
+|Email field        |Fill in<br>(incorrect format)|On submit: form wont'submit|Pass  |
+|                           |        |Error message on invalid field          |Pass  |
+|                          |Fill in<br>(correct format)|On submit: form submit|Pass  |
+|                 |Fill in<br>(email already used)|On submit: form wont'submit|Pass  |
+|                           |        |Error message on invalid field          |Pass  |
+|                  |Fill in<br>(email not already used)|On submit: form submit|Pass  |
+|Username field       |Fill in<br>(all whitespace)|On submit: form wont'submit|Pass  |
+|                           |        |Error message on invalid field          |Pass  |
+|                          |Fill in<br>(correct format)|On submit: form submit|Pass  |
+|              |Fill in<br>(username already used)|On submit: form wont'submit|Pass  |
+|                           |        |Error message on invalid field          |Pass  |
+|               |Fill in<br>(username not already used)|On submit: form submit|Pass  |
+|Password field         |Fill in<br>(incorrect format)|On submit: form wont'submit|Pass  |
+|                       |            |error message on invalid field          |Pass  |
+|                     |Fill in<br>(correct format)|On submit: form wont'submit|Pass  |
+|              |Fill in<br>(passwords don't match)|On submit: form wont'submit|Pass  |
+|                           |        |error message on invalid field          |Pass  |
+|                         |Fill in<br>(passwords match)|On submit: form submit|Pass  |
+|Sign Up button(form invalid)|Click  |Form wont'submit                        |Pass  |
+|                           |        |error message on invalid fields         |Pass  |
+|Sign Up button(form valid) |Click   |Form submit                             |Pass  |
+|                           |        |redirect to email verification page     |Pass  |
+|                           |        |email sent to user                      |Pass  |
+|**Email Verification**     |        |                                        |      |
+|Follow link from email     |Click   |redirect to confirm email page          |Pass  |
+|Confirm button             |Click   |redirect to log in page                 |Pass  |
+|                           |        |sign in form populated with user info   |Pass  |
+|                           |        |email confirmation toast appears        |Pass  |
+|**Login**                  |        |                                        |      |
+|Sign up link               |Click   |Redirect to sign up page                |Pass  |
+|*Form*                     |        |                                        |      |
+|Username Field     |Fill in<br>(just whitespace)|On submit:form won't submit |Pass  |
+|                           |        |error message on invalid field          |Pass  |
+|                    |Fill in<br>(wrong username)|On submit:form won't submit |Pass  |
+|                           |        |error message for username/password     |Pass  |
+|Password Field     |Fill in<br>(just whitespace)|On submit:form won't submit |Pass  |
+|                           |        |error message on invalid field          |Pass  |
+|                    |Fill in<br>(wrong password)|On submit:form won't submit |Pass  |
+|                           |        |error message for username/password     |Pass  |
+|Forgot Password button     |Click   |redirect to password reset page         |Pass  |
+|Sign In button(form invalid)|Click  |form won't submit                       |Pass  |
+|                           |        |error message on invalid field(s)       |Pass  |
+|Sign In button(form valid) |Click   |form submit                             |Pass  |
+|                           |        |redirect to home page                   |Pass  |
+|                           |        |sign in confirmation toast appears      |Pass  |
+|**Password Reset**         |        |                                        |      |
+|Email Field        |Fill in<br>(just whitespace)|On submit:form won't submit |Pass  |
+|                           |        |error message on invalid field          |Pass  |
+|                |Fill in<br>(incorrect email)|On submit:form won't submit    |Pass  |
+|                           |        |error message on invalid field          |Pass  |
+|                           |Fill in<br>(correct email)|On submit:form submit |Pass  |
+|Forgot Password button     |Click   |redirect to password reset page         |Pass  |
+|Reset password button(form invalid)|Click  |form won't submit                |Pass  |
+|                           |        |error message on invalid field          |Pass  |
+|Reset password button(form valid)|Click  |form submit                        |Pass  |
+|                           |        |redirect to password reset confirmation |Pass  |
+|                           |        |email sent to user                      |Pass  |
+|**Change Password**        |        |                                        |      |
+|Password reset link from email|Click|redirect to change password page        |Pass  |
+|Password input     |Fill in<br>(all whitespace)|On submit: form won't submit |Pass  |
+|                           |        |error message on field                  |Pass  |
+|           |Fill in<br>(passwords not matching)|On submit: form won't submit |Pass  |
+|                           |        |error message on field                  |Pass  |
+|                        |Fill in<br>(passwords match)|On submit: form submit |Pass  |
+|Change password button(form invalid)|Click|Redirect to change password confirmation|Pass  |
+|                           |      |Password change confirmation toast appears|Pass  |
+|**Logout Confirmation**    |        |                                        |      |
+|Sign out button            |Click   |Redirect to homepage                    |Pass  |
+|                           |        |Sign out confirmation toast appears     |Pass  |
 ### Testing on other devices
 
 #### Devices tested:
@@ -374,16 +596,6 @@ I used [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) t
 - Brave (Chromium)
 - Safari
 
-#### Tests Performed
-- All buttons take you to the part of the site they say they will
-- Be able to succesfully register an account
-- Be able to easily log in and log out of the account
-- Add a route with all fields storing information in the database correctly
-- Use the edit button to successfully update a route
-- Use the delete button to successfully delete a route
-
-#### Results
-All devices passed the tests
 
 ### Testing User Stories
 
