@@ -94,7 +94,7 @@
                 <h5>Reviews</h5>
 
                 {% if request.user.is_authenticated %}
-                    <form method="post" action=".">
+                    <form method="post" action="." class="">
                         {% csrf_token %}
 
                         <div>
