@@ -116,6 +116,14 @@
                         </div>
                     </form>
                 {% endif %}
+
+                {% for review in product.reviews.all %}
+                    <div>
+                        <strong>Rating:</strong>{{ review.rating}}/5<br>
+                        <strong>Comment:</strong><br>
+                        {{ review.content}}
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
