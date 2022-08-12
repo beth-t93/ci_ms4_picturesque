@@ -126,7 +126,7 @@
                         <strong>Rating:</strong>{{ review.rating}}/5<br>
                         <strong>Comment:</strong><br>
                         {{ review.content}}<br>
-                        <strong>Date:</strong>{{ review.created_at}}<br>
+                        <strong>Date:</strong>{{ review.created_at|date:"d/m/y"}}<br>
                     </div>
                 {% endfor %}
             </div>
