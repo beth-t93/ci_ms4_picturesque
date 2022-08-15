@@ -13,4 +13,5 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('contact/', include('contact.urls')),
     path('blog/', include('blog.urls')),
+    path('<slug:slug>/', post_detail, name='post_detail')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

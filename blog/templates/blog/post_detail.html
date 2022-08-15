@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    
+    <h1 class="title">{{ post.title }}</h1>
+
+    <small>Posted at {{ post.date_added }}</small>
+
+    <p><strong>{{ post.intro }}</strong></p>
+
+    <p>{{ post.body }}</p>
+
+
+{% endblock %}
