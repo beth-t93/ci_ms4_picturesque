@@ -20,6 +20,7 @@
             <h2 class="subtitle">{{ post.title }}</h2>
             <p>{{ post.intro }}</p>
             <p>Posted at {{ post.date_added }}</p>
+            <a href="{% url 'post_detail' post.slug %}">Read more</a>
         </div>
     {% endfor %}
 
