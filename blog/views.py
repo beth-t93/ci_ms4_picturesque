@@ -8,16 +8,14 @@ from .forms import PostForm
 
 def blogpage(request):
     posts = Post.objects.all()
-
     return render(request, 'blog/blogpage.html', {'posts': posts})
 
 def post_detail(request, slug):
     post = Post.objects.get(slug=slug)
-    
     return render(request, 'blog/post_detail.html', {'post': post})
 
 @login_required
-def add_post(request, slug):
+def add_post(request):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only site admins can do that.')
         return redirect(reverse('home'))
