@@ -48,23 +48,23 @@ def edit_post(request, slug):
 
     post = get_object_or_404(Post, slug=slug)
     if request.method == 'POST':
-        form = PostForm(request.POST, request.FILES, instance=slug)
+        form = PostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             post.save()
             messages.success(request, 'Successfully updated the post!')
-            return redirect(reverse('post_detail', args=[slug.id]))
+            return redirect(reverse('post_detail', args=[post.slug]))
         else:
             messages.error(request,
                            ('Failed to update the post. '
                             'Please ensure the form is valid.'))
     else:
-        form = PostForm(instance=slug)
+        form = PostForm(instance=post)
         messages.info(request, f'You are editing {post.title}')
 
     template = 'blog/edit_post.html'
     context = {
         'form': form,
-        'slug': slug,
+        'post': post,
     }
 
     return render(request, template, context)
