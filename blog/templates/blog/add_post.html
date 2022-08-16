@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col">
+                <h2>Add Blog Post</h2>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <form method="POST" action="{% url 'add_post' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | cripsy }}
+                <div class="text-right">
+                        <a class="btn btn-outline-black rounded-0" href="{% url 'blog' %}">Cancel</a>
+                        <button class="btn btn-black rounded-0" type="submit">Create Post</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

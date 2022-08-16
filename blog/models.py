@@ -8,3 +8,9 @@ class Post(models.Model):
 
     class Meta:
         ordering = ['-date_added']
+
+class AddPost(models.Model):
+    title = models.CharField(max_length=255)
+    slug = models.SlugField()
+    body = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
