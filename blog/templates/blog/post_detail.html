@@ -15,9 +15,20 @@
 
 {% block content %}
     <div>
+        <div class="image-container my-5">
+            {% if product.image %}
+                <a href="{{ Post.image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid" src="{{ Post.image.url }}" alt="{{ Post.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ Post.name }}">
+                </a>
+            {% endif %}
+        </div>
         <h1 class="title">{{ post.title }}</h1>
-        <small>Posted at {{ post.date_added }}</small>
         <p>{{ post.body }}</p>
+        <small>Posted at {{ post.date_added }}</small><br>
         <a href="{% url 'blog' %}">Go Back</a>
         {% if request.user.is_superuser %}
             <small class="ml-3">

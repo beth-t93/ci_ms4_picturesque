@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -50,7 +49,7 @@ def edit_post(request, slug):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
-            post.save()
+            form.save()
             messages.success(request, 'Successfully updated the post!')
             return redirect(reverse('post_detail', args=[post.slug]))
         else:
