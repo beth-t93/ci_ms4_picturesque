@@ -19,12 +19,12 @@
         <div class="post block text-color">
             <h2>{{ post.title }}</h2>
             {% if product.image %}
-                <a href="{{ Post.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid" src="{{ Post.image.url }}" alt="{{ Post.name }}">
+                <a href="{{ post.image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.name }}">
                 </a>
                 {% else %}
                 <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ Post.name }}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.name }}">
                 </a>
             {% endif %}
             <p>{{ post.body|safe|truncatewords:"25"|linebreaks }}</p>

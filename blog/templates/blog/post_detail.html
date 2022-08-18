@@ -26,6 +26,15 @@
                 </a>
             {% endif %}
         </div>
+        {% if product.image %}
+                <a href="{{ post.image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.name }}">
+                </a>
+            {% endif %}
         <h1 class="title">{{ post.title }}</h1>
         <p>{{ post.body }}</p>
         <small>Posted at {{ post.date_added }}</small><br>
