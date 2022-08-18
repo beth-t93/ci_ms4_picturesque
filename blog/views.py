@@ -6,8 +6,8 @@ from .models import Post
 from .forms import PostForm
 
 def blogpage(request):
-    posts = Post.objects.all()
-    return render(request, 'blog/blogpage.html', {'posts': posts})
+    post = Post.objects.all()
+    return render(request, 'blog/blogpage.html', {'post': post})
 
 def post_detail(request, slug):
     post = Post.objects.get(slug=slug)
