@@ -65,7 +65,7 @@ Picturesque is an online print shop for a photographer, it sells prints alongsid
 12. As a site owner I want the site to be clean and simple, allowing the products to stand out
 13. As a site owner I want the purpose of the site to be clear to each user.
 14. As a site owner I want to be able to add, edit and delete products in the store.
-
+15. As a site owner I want to be able to keep users up to date with news and events at Picturesque.
 ### User Requirements and Expectations
 #### Requirements
 - Easy to navigate
@@ -274,20 +274,28 @@ The homepage is made up of:
 8. As a visitor I would like to receive an email confirmation of my order
 
 #### Feature 7 - Contact Page
-- This page allows users to find contact information for Picturesque
-
-##### Checkout information and details
 ![images](docs/features/contact.png)
 - This page contains all the contact information for Picturesque
 - There are direct links to all social media channels
 
 ###### User stories covered by this feautre:
 9. As a visitor I would like to easily find Picturesque's contact information, social media and find out who they are
+#### Feature 8 - Blog Page
+![images](docs/features/blogpage.png)
+- This page is clean and easy to follow
+- It shows the blogposts with a snippet of the post followed by a read more button
+##### Blog Details Page
+![images](docs/features/blog-post.png)
+- This page is clean and easy to follow
+- It shows the image on the left with the text on the right of the screen
+- For admin users there is an edit and delete button on each post.
+
+###### User stories covered by this feautre:
+15. As a site owner I want to be able to keep users up to date with news and events at Picturesque.
+
 
 ## Future Features
 In the future I would like to add the functionality to turn part of the site into a print on demand site, so users can then upload their own files to get printed.
-
-I would also add customer reviews of each item.
 
 ## Information Architecture
 ### Data Storage
