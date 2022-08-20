@@ -16,8 +16,8 @@
 {% block content %}
     
     {% for post in posts %}
-    <div class="card m-3" style="width: 50rem";>
-        <div class="card text-color">
+    <div class="mx-auto block m-3" style="max-width: 80rem; padding: 2rem;">
+        <div class="text-color">
             {% if post.image %}
                 <a href="{{ Post.image.url }}" target="_blank">
                     <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.name }}">
@@ -36,4 +36,18 @@
     <br>
     {% endfor %}
 
+    <div class="btt-button shadow-sm rounded-0 border button-style">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up page-top mx-auto my-auto"></i>
+        </a>	
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
 {% endblock %}
