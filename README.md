@@ -664,31 +664,43 @@ All elements on this page are displayed and responsive
     | Navigate to the contact page | click | Contact page with all contact info and links to social media opens | Works as expected |
 
 
-10. As a site owner I want the site to be easy to use
+ 10. As a visitor I would like to leave reviews of items I have purcahsed.
+
+        | Feature | Action | Expected Result | Actual Result |
+        | ------- | ------ | --------------- | ------------- |
+        | Review form at the bottom of the product details for account holders | Saves the review and displays in list with other reviews | Works as expected |
+
+11. As a site owner I want the site to be easy to use
 
     | Feature | Action | Expected Result | Actual Result |
     | ------- | ------ | --------------- | ------------- |
     | Simple, easy to use design | User is able to navigate to all parts of the site | find and purchase products | Works as expected |
 
-11. As a site owner I want the site to be clean and simple, allowing the products to stand out
+12. As a site owner I want the site to be clean and simple, allowing the products to stand out
 
     | Feature | Action | Expected Result | Actual Result |
     | ------- | ------ | --------------- | ------------- |
     | Simple, easy to use design, and muted colour scheme | User is able to easily see the products | find and purchase products | Works as expected |
 
-12. As a site owner I want the purpose of the site to be clear to each user.
+13. As a site owner I want the purpose of the site to be clear to each user.
 
     | Feature | Action | Expected Result | Actual Result |
     | ------- | ------ | --------------- | ------------- |
     | Homepage with some company information | The user is able to see this information when they open the page | know the purpose of the site | Works as expected |
 
-13. As a site owner I want to be able to add, edit and delete products in the store.
+14. As a site owner I want to be able to add, edit and delete products in the store.
 
     | Feature | Action | Expected Result | Actual Result |
     | ------- | ------ | --------------- | ------------- |
     | Add products link in profile dropdown  | Superusers are able to click this link | Be taken to the add product page | Works as expected |
     | Edit product button | Superusers can see this for each item, either in the all products view or the product details view | Be taken to the edit product page | Works as expected |
     | Edit product button | Superusers can see this for each item, either in the all products view or the product details view | Delete an item | Works as expected |
+
+15. As a site owner I want to be able to keep users up to date with news and events at Picturesque.
+
+    | Feature | Action | Expected Result | Actual Result |
+    | ------- | ------ | --------------- | ------------- |
+    |  Blog that only admin users can update | main blog page shows summary of all posts, read more takes user to post details page | all users are able to read posts, admin users can also update and delete posts | Works as expected |
     
 ## Bugs
 - Bug : Products not showing
@@ -905,6 +917,7 @@ https://picturesque-ms4.herokuapp.com/wh/
 
 ### Code
 - [Bootstrap](https://getbootstrap.com/) for carousel and short hand margin/padding code
+- [Codemy.com on YouTube](https://www.youtube.com/watch?v=m3efqF9abyg&t=252s) for helping with slugs instad of products id in views.py
 
 ## Acknowledgements
 - To my mentor, Richard Wells for supporting me in completing this project.
