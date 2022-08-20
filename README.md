@@ -59,12 +59,12 @@ Picturesque is an online print shop for a photographer, it sells prints alongsid
 7. As a visitor I would like to receive an order confirmation after checkout
 8. As a visitor I would like to receive an email confirmation of my order
 9. As a visitor I would like to easily find Picturesque's contact information, social media and find out who they are
-
+10. As a visitor I would like to leave reviews of items I have purcahsed.
 #### Site Owner Goals
-10. As a site owner I want the site to be easy to use.
-11. As a site owner I want the site to be clean and simple, allowing the products to stand out
-12. As a site owner I want the purpose of the site to be clear to each user.
-13. As a site owner I want to be able to add, edit and delete products in the store.
+11. As a site owner I want the site to be easy to use.
+12. As a site owner I want the site to be clean and simple, allowing the products to stand out
+13. As a site owner I want the purpose of the site to be clear to each user.
+14. As a site owner I want to be able to add, edit and delete products in the store.
 
 ### User Requirements and Expectations
 #### Requirements
@@ -73,6 +73,7 @@ Picturesque is an online print shop for a photographer, it sells prints alongsid
 - The user will be able to purchase items, with an account, but also anonymously
 - Users with an account will be able to store their contact and delivery information
 - All users will be able to view the full range of products
+- Users will be able to review products if they have an account
 
 #### Expectations
 - Buttons take you to the page they say they will
@@ -171,9 +172,9 @@ This font is clean and easy to read.
 1. As a visitor I want the site to be easy and simple to use.
 2. As a visitor I want to be able to search for a product by name or description
 9. As a visitor I would like to easily find Picturesque's contact information and social media
-10. As a site owner I want the site to be easy to use.
-11. As a site owner I want the site to be clean and simple, allowing the products to stand out
-12. As a site owner I want the purpose of the site to be clear to each user.
+11. As a site owner I want the site to be easy to use.
+12. As a site owner I want the site to be clean and simple, allowing the products to stand out
+13. As a site owner I want the purpose of the site to be clear to each user.
 
 #### Feature 1 - Homepage
 The homepage is made up of:
@@ -185,7 +186,7 @@ The homepage is made up of:
 - It gives users a hint of the kind of images that are sold on the site
 - It is eyecatching and will draw the users attention
 ###### User stories covered by this feautre:
-11. As a site owner I want the site to be clean and simple, allowing the products to stand out
+12. As a site owner I want the site to be clean and simple, allowing the products to stand out
 
 ##### 2. A summary of picturesque
 ![images](docs/features/company-info.png)
@@ -193,7 +194,7 @@ The homepage is made up of:
 - The font is clear and easy to read 
 ###### User stories covered by this feautre:
 9. As a visitor I would like to easily find Picturesque's contact information, social media and find out who they are
-12. As a site owner I want the purpose of the site to be clear to each user.
+13. As a site owner I want the purpose of the site to be clear to each user.
 
 
 #### Feature 2 - All Products Pages
@@ -207,7 +208,7 @@ The homepage is made up of:
 
 ###### User stories covered by this feautre:
 3. As a visitor I would like to be able to sort products by name, price or category
-13. As a site owner I want to be able to add, edit and delete products in the store.
+14. As a site owner I want to be able to add, edit and delete products in the store.
 
 
 #### Feature 3 - Product Details Page
@@ -220,10 +221,13 @@ The homepage is made up of:
 - This page is simple and easy to read
 - The dropdown allows users to select the size print they would like to purchase
 - The add to basket button allows users to add items to basket
+- There is the option to leave a review if the user is logged in to an account
+- All users are able to view reviews left by other users
 
 ###### User stories covered by this feautre:
 4. As a visitor I would like to be able to add a product to my basket and checkout
-13. As a site owner I want to be able to add, edit and delete products in the store.
+10. As a visitor I would like to leave reviews of items I have purcahsed.
+14. As a site owner I want to be able to add, edit and delete products in the store.
 
 
 #### Feature 4 - User Profile
