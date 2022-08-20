@@ -129,7 +129,10 @@ This font is clean and easy to read.
 - [Checkout - mobile and tablet](docs/wireframes/Checkout-mobile.png)
 - [Checkout Success - desktop](docs/wireframes/Checkout-Success-desktop.png)
 - [Checkout Success - mobile and tablet](docs/wireframes/Checkout-Success-mobile.png)
-
+- [Blog - desktop](docs/wireframes/blogpage-desktop.png)
+- [Blog - mobile and tablet](docs/wireframes/blogpage-mobile.png)
+- [Blog Post - desktop](docs/wireframes/blogpost-desktop.png)
+- [Blog Post - mobile and tablet](docs/wireframes/blogpost-mobile.png)
 ## Technologies Used
 
 ### Languages
