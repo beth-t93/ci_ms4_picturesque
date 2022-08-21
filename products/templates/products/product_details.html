@@ -94,15 +94,15 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-3 col-md-6 text-color review-layout text-center">
+            <div class="text-color review-layout text-center mx-auto">
                 <h5>Reviews</h5>
 
                 {% if request.user.is_authenticated %}
                     <form method="post" action="." class="">
                         {% csrf_token %}
 
-                        <div>
-                            <label>Rating</label>
+                        <div class="text-left">
+                            <label>Rating:</label>
                             <select name="rating">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -112,18 +112,16 @@
                             </select>
                         </div>
                         <div>
-                            <label>Comment</label>
+                            <label class="text-left">Comment:</label>
                             <textarea name="content"></textarea>
                         </div>
                         <div>
-                            <button>Submit</button>
+                            <button class="btn btn-black rounded-0 text-uppercase mt-3">Submit</button>
                         </div>
                     </form>
                 {% endif %}
-            </div>
-            <div class="col-sm-3 col-md-6 text-color review-layout text-center">
                 {% for review in product.reviews.all %}
-                    <div class="ratings">
+                    <div class="ratings p-3 mt-3">
                         <strong>Rating:</strong>{{ review.rating}}/5<br>
                         <strong>Comment:</strong><br>
                         {{ review.content}}<br>
