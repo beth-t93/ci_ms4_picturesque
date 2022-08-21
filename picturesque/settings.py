@@ -1,5 +1,7 @@
 import os
 import dj_database_url
+if os.path.isfile('env.py'):
+    import env
 
 from pathlib import Path
 from dotenv import load_dotenv
